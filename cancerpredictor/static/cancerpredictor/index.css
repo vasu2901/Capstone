@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url('https://wpdemo.zcubethemes.com/aquato/wp-content/uploads/2021/06/slider_img_bg-1.png');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  position: relative;
+  /* background: hsla(0, 32%, 67%, 0.6); */
+  padding: 1rem 0;
+  z-index: 999;
+  backdrop-filter: blur(10px); 
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(90%, 800px);
+  margin-inline: auto;
+  color: #fff;
+}
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  nav ul li{
+    border: 3px solid #13099e; 
+    border-radius:10px;
+    padding: 10px; 
+    /* display: inline-block;  */
+  }
+
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  nav a:hover {
+    color: #4FC3F7;
+  }
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  
+  .toggle {
+    transition: ease-in-out 550ms;
+    transform: translate(0px);
+    opacity: 1;
+    display: block;
+  }
+  
+  .header-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: hsla(0, 0%, 0%, .5);
+    backdrop-filter: blur(10px);
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  
+  nav li {
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  nav li:hover {
+    background: hsla(0, 0%, 0%, .7);
+  }
+  
+  .hamburger {
+    display: block; 
+  }
+}
+
+.logo{
+  /* border: 2px solid red; */
+}
+
+.container-sec{
+ height: 620px;
+ width: 1535px;
+ /* border: 2px solid red; */
+ /* border: 1px solid #ccc; */
+ padding: 20px;
+ position: relative;
+}
+
+.conatiner-sec-img{
+  /* border: 2px solid blue;
+  width: 500px;
+   */
+  position: absolute;
+  margin-left: 872px;
+  top: 55px; 
+  margin-right: 150px;
+}
+
+.container-sec-title{
+  margin-top: 40px;
+  /* border: 2px solid red; */
+  width: 1000px;
+}
+
+.container-sec-title h1{
+  /* background-color: #333; */
+  font-size: 60px; 
+  color: white; 
+  margin: 0; 
+}
+
+.container-sec-title-2{
+  margin-top: 50px;
+ /* border: 2px solid red; */
+ width: 1000px;
+}
+
+.container-sec-btn{
+  /* border: 2px solid blue; */
+  width: 150px;
+  margin-top: 100px;
+  margin-left: 400px;
+}
+
+.container-sec-btn button{
+  padding: 14px 21px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  background-color: #f05f40; /* Set background color */
+  color: white; /* Set text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+.container-sec-title-2 h3{
+  font-size: 20px; 
+  color: white; 
+  margin: 0; 
+}
+
+.container-sec-2{
+ background: url('./sec-2-img-2.jpg');
+ height: 700px;
+ width: 1535px;
+ /* border: 2px solid red; */
+}
+
+.cont-sec-2-1{
+ margin-top: 50px;
+ margin-left: 573px;
+ /* border: 2px solid blue; */
+ height: 100px;
+ width: 500px;
+}
+
+.cont-sec-2-2{
+ margin-left: 436px;
+ /* border: 2px solid blue; */
+ height: 100px;
+ width: 700px;
+ margin-top: 20px;
+}
+
+.cont-sec-2-2 p{
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cont-sec-2-3{
+ margin-top: 50px;
+ /* border: 2px solid blue; */
+}
+
+.cont-sec-2-1 h1 {
+ font-style: normal;
+ font-weight: 700;
+ text-transform: normal;
+ font-size: xxx-large;
+}
+
+.box {
+  width: 254px;
+  height: 302px;
+  border: 5px solid #ccc;
+  margin: 10px;
+  margin-left: 50px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.box img {
+ max-width: 100%;
+ max-height: 100%;
+ margin-bottom: 10px;
+}
+
+.box p {
+ margin: 0;
+}
+

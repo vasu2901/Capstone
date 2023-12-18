@@ -1,0 +1,63 @@
+{% extends 'cancerpredictor/layout.html' %}
+{% load static %}
+{% block body %}
+
+<div class="overlay-container" id="predictcontainer" >
+    <form id="predictform" style="background-color: rgba(245, 245, 245, 0.147);margin-top: 1%;">
+        <h3>Prediction Form</h3>
+        <div class="mx-auto" style="width: 95%;">
+            <label for="exampleInputEmail1" class="form-label"><strong>Username</strong></label>
+            <input type="text" class="form-control" id="username" aria-describedby="emailHelp"
+                value="{{user.username}}">
+        </div>
+        <div class="mx-auto " style="width: 95%;">
+            <label for="exampleInputPassword1" class="form-label"><strong>Radius</strong></label>
+            <input type="text" class="form-control" id="radius_mean" required>
+        </div>
+        <div class="mx-auto " style="width: 95%;">
+            <label for="exampleInputPassword1" class="form-label"><strong>Texture</strong></label>
+            <input type="text" class="form-control" id="texture_mean" required>
+        </div>
+        <div class="mx-auto " style="width: 95%;">
+            <label for="exampleInputPassword1" class="form-label"><strong>Perimeter</strong></label>
+            <input type="text" class="form-control" id="perimeter_mean" required>
+        </div>
+        <div class="mx-auto " style="width: 95%;">
+            <label for="exampleInputPassword1" class="form-label"><strong>Area</strong></label>
+            <input type="text" class="form-control" id="area_mean" required>
+        </div>
+        <div class="mx-auto " style="width: 95%;">
+            <label for="exampleInputPassword1" class="form-label"><strong>Smoothness</strong></label>
+            <input type="text" class="form-control" id="smoothness_mean" required>
+        </div>
+        <div class="mx-auto " style="width: 95%;">
+            <label for="exampleInputPassword1" class="form-label"><strong>Compactness</strong></label>
+            <input type="text" class="form-control" id="compactness_mean" required>
+        </div>
+        <div class="mx-auto " style="width: 95%;">
+            <label for="exampleInputPassword1" class="form-label"><strong>Concavity</strong></label>
+            <input type="text" class="form-control" id="concavity_mean" required>
+        </div>
+        <div class="mx-auto " style="width: 95%;">
+            <label for="exampleInputPassword1" class="form-label"><strong>Concave points</strong></label>
+            <input type="text" class="form-control" id="concave_points_mean" required>
+        </div>
+        <div class="mx-auto " style="width: 95%;">
+            <label for="exampleInputPassword1" class="form-label"><strong>Symmetry</strong></label>
+            <input type="text" class="form-control" id="symmetry_mean" required>
+        </div>
+        <div class="mx-auto " style="width: 95%;">
+            <label for="exampleInputPassword1" class="form-label"><strong>Fractal dimension</strong></label>
+            <input type="text" class="form-control" id="fractal_dimension_mean" required>
+        </div>
+        <hr>
+        <div class="text-center">
+            <button class="btn btn-outline-primary" type="submit">Submit</button>
+        </div>
+    </form>
+    <br>
+    <h3 id="result" class="mx-auto" style="display: none;"></h3>
+    <br>
+</div>
+<script src="{% static 'cancerpredictor/script.js' %}"></script>
+{% endblock %}
